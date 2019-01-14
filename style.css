@@ -1,0 +1,292 @@
+* { margin:0; padding:0; } /* to remove the top and left whitespace */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+  width: 100%;
+  height: 100%;
+
+  font-family: 'Source Sans Pro Light', sans-serif;
+  font-size: 20px;
+  color: white;
+} 
+
+/*media queries; responsive font size*/
+@media all and (min-width: 960px) {
+    body{
+        font-size: 20px;
+    }
+}
+@media all and (max-width: 959px) and (min-width: 600px) {
+    body{
+        font-size: 18px;
+  }
+}
+@media all and (max-width: 599px) and (min-width: 320px) {
+    body{
+        font-size: 16px;
+   }
+}
+
+@media all and (max-width: 319px) and (min-width: 0px) {
+  body{
+      font-size: 16px;
+ }
+}
+
+.hidden{
+  display:none !important;
+}
+.unhidden{
+  display:block;
+}
+
+#starttext1{
+  position: absolute;
+  display: block;
+  z-index: 2;
+}
+
+.animText{
+  position: fixed;
+  display: block;
+  top: 50%;
+  left: 50%;
+  margin-top: 80px;
+  transform: translate(-50%,+50%);
+  -ms-transform: translate(-50%,+50%);
+  text-align: center;
+}
+
+.animText:nth-child(1){
+  animation-name: fade;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  animation-direction: alternate-reverse;  
+}
+
+.animText:nth-child(2){
+  animation-name: fade;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  animation-direction: alternate;
+}
+
+@keyframes fade{
+    0%,50% {
+      opacity: 0;
+  }
+    100%{
+      opacity: 1;
+  }
+}
+
+#startimage{
+  position: absolute;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%,+50%);
+}
+
+#helpimage{
+  position: absolute;
+  height: 75px;
+  width: 75px;
+  margin: 40px 31px auto auto;
+  top: 0;
+  right:0;
+}
+
+#helptext {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  background-color: rgba(0,0,0,0.95);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  z-index: 999;
+}
+
+#copyright{
+  color:  #333
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+#overview-button {
+  display: none;
+  position: absolute;
+  top: 90%;
+  left: 0px;
+  width: 10%;
+  height: 10%;
+  z-index: 500;
+}
+
+#simple-icon1 {
+  display: none;
+  position: absolute;
+  bottom: 0px;
+  left: 100px;
+  width: 80px;
+  height: 80px;
+  z-index: 500;
+}
+
+#simple-icon2 {
+  display: none;
+  position: absolute;
+  bottom: 0px;
+  left: 180px;
+  width: 80px;
+  height: 80px;
+  z-index: 500;
+}
+
+#hoverbuttons {
+  position: absolute;
+  display: block;
+  margin: 0px;
+  left: 90%;
+  width: 10%;
+  height: 100%;
+}
+
+#mySidenav, #mySidenav ul{    
+	z-index: 2;
+	margin: 155px 0px 0px 0px;
+}
+
+#mySecNav{
+  z-index: 3;
+	margin: -300px auto 0px 0px;
+  width: 45%;
+}
+
+#mySecNav li {
+	border-radius: 50%;
+  height: 15px;
+  margin: 5px 0px 5px 0px;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.1s ease;
+  -moz-transition: -moz-transform 0.1s ease;
+  transition: transform 0.1s ease;
+
+}
+
+#mySidenav li {
+	background-color: #333;
+	border-radius: 50%;
+  height: 5px;
+  width: 5px;
+	margin: 15px 66px 15px auto;
+  display: block;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.1s ease;
+  -moz-transition: -moz-transform 0.1s ease;
+  transition: transform 0.1s ease;
+}
+
+#mySidenav li.active, #mySidenav li:hover, #mySidenav .special{
+  background-color: #fff;
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+#mySidenav .specialhover {
+  background-color: #fff;
+}
+
+#mySidenav a {
+	outline: 0;
+	vertical-align: top;
+	margin: 0px 0px 0px 25px;
+	position: absolute;
+}
+
+.tooltip {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tooltip-inner {
+  position: relative;
+  font-size: 16px;
+  background: transparent !important;
+  z-index: -1;
+}
+
+#closeimage_help{
+  position: absolute;
+  height: 50px;
+  left: 30px;
+  bottom: 30px;
+}
+
+#helpimage1 {
+  position: relative; 
+  height: 50px;
+  margin: auto 0px 0px 11px;
+}
+
+#helpimage2 {
+  position: relative; 
+  height: 50px;
+  margin: auto 0px 0px 20px;
+}
+
+#smalltext {
+  color:  #838383;
+  font-size: 12px;
+  margin: 5px 0px 0px 0px;
+}
+
+#closeimage{
+  display: block;
+  position: absolute;
+  height: 50px;
+  left: 30px;
+  bottom: 30px;
+  cursor: pointer;
+}
+
+/*make close icon appear at the same position*/
+#closeimage_help{
+  left: 30px; 
+}
+
+/* "#CUSTOMIZATION" add #text as needed in index.html*/
+#zoomviewtext, #text0, #text1, #text2, #text3, #text4, #text5, #text6, #text7, #text8, #text9, #text10, #text11, #text12, #text13, #text14, #text15, #text16, #text17, #text18{
+  pointer-events: none;
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 57%;
+  top: 10px;
+  left: 20px;
+  font-size: 16px;
+}
